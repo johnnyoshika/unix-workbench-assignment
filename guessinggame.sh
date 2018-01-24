@@ -8,7 +8,7 @@ do
     read guess
     actual=$(ls -l | grep ^- | wc -l)
 
-    if [[ $guess = $actual ]]
+    if [[ $guess =~ ^[0-9]+$ ]] && [[ $guess -eq $actual ]]
     then
         echo "'$guess' is correct!!!"
         break
