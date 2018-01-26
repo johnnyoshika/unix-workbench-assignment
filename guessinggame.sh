@@ -4,9 +4,9 @@
 actual=$(ls -l | grep ^- | wc -l)
 
 function isNumeric() {
-    if [[ ! $1 =~ ^[0-9]+$ ]]
+    if [[ ! $@ =~ ^[0-9]+$ ]]
     then
-        echo "'$1' is not a number. Try again..."
+        echo "'$@' is not a number. Try again..."
         false
     fi    
 }
